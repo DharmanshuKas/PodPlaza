@@ -1,0 +1,33 @@
+.left-L{
+    background-color: white;
+}
+.top-R-L{
+    background-color: rgb(235, 235, 235);
+}
+.right-L{
+    background-color: rgb(211, 211, 211);
+}
+.card-box-L{
+    background-color: white;
+}
+.invert-L{
+    filter: none;
+}
+.colorWhite-L{
+    color: black;
+}
+.card-n-L{
+    background-color: white;
+    box-shadow: 1px 1px 18px #00000036;
+}
+.card-n-L:hover {
+    /* transform: translateY(-7px); */
+    background-color: #f3ebffeb;
+}
+.login-content-L{
+    background-color: white;
+}
+.hastg-L{
+    background-color: grey;
+
+}
