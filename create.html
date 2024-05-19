@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="javascript/register.js" defer></script>
+    <title>Create Account</title>
+</head>
+<body>
+    <div id="userset" class="user-indesign" style="display: block; background-color: #6f7079;">
+        <div  class="login-content">
+            <span class="close colorWhite" id="closeF">&times;</span>
+            <h2 class="colorWhite" id="formPage">Create Account</h2>
+            <!-- <div id="ReDirect_auth" class="Redirect-set">
+                <img src="Image/googlelogo.svg" alt="">
+                <h4 class="colorWhite">Sign In with Google</h4>
+            </div>
+            <div class="opt-or colorWhite">
+                <hr class="hr-set colorWhite">or<hr class="hr-set">
+            </div> -->
+            <form id="loginForm" name="submit-to-google-sheet" method="post">
+                <div class="entryfill">
+                    <label for="usermail"></label>
+                    <img class="invert" src="Image/mail.svg" alt="">
+                    <input class="inputfill" type="email" id="email" name="email" placeholder="Email Id" required><br><br>
+                </div>
+                <div class="entryfill">
+                    <label for="password"></label>
+                    <img class="invert" src="Image/passw.svg" alt="">
+                    <input class="inputfill" type="password" id="password" name="password" placeholder="Password" required><br><br>
+                    <img id="eyeclose" class="invert" src="Image/eye visible.svg" alt="" onclick="passecure()">
+                </div>
+                <!-- <div class="frgtpass colorWhite">Forgot Password ?</div> -->
+                <button id="submit" class="form-btn create-btn" type="submit" name="submit">Sign Up</button>
+                <span id="success"></span>
+                <!-- <div class="entryfill">
+                    <label for="otp"></label>
+                    <input class="inputfill" type="text" id="otp" name="otp" placeholder="Enter OTP" required><br><br>
+                </div>
+            
+                <button class="form-btn" type="button" onclick="sendOTP()">Send OTP</button>
+                <button class="form-btn" type="button" onclick="verifyOTP()">Verify OTP</button> -->
+            </form>
+            <div id="message"></div>
+            <div class="colorWhite" id="Askuser" class="account"><h4><span>You have an account ? </span><span id="spanCreteLog" class="crete-login">Sign In</span></h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

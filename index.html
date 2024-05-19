@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightM.css">
+    <link rel="import" href="podcastEP.html">
+    <script type="module" src="javascript/login.js" defer></script>
+    <script type="module" src="javascript/passreset.js" defer></script>
+    <script type="module" src="javascript/Currauth.js" defer></script>
+    <script type="module" src="javascript/logout.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <title>Host your Podcast</title>
+</head>
+
+<body>
+    <section id="main" class="border">
+        <div id="sec-all" class="border">
+            <div class="left border">
+                <div class="top-L" id="Navbar">
+                    <ul class="ulist title-font">
+                        <h1 class="h1 fontmain">PodiCast</h1>
+                        <li id="dashbar" class="list-att" onclick="showContent('option4')"><img class="invert"
+                                src="Image/home.svg" alt="">
+                            <h5 class="colorWhite">Dashboard</h5>
+                        </li>
+                        <li id="searchbar" class="list-att" onclick="showContent('option1')"><img class="invert"
+                                src="Image/search.svg" alt="">
+                            <h5 class="colorWhite">Search</h5>
+                        </li>
+                        <li id="Favbar" class="list-att"><img class="invert" src="Image/favorite.svg" alt="">
+                            <h5 class="colorWhite">Favorites</h5>
+                        </li>
+                        <hr style="margin: 1%; margin-bottom: 12%;">
+                        <li id="Uploadbar" class="list-att" onclick="showContent('option3')"><img class="invert"
+                                src="Image/upload.svg" alt="">
+                            <h5 class="colorWhite">Upload</h5>
+                        </li>
+                        <li id="Modetheme" class="list-att"><img class="invert" src="Image/light.svg" alt="">
+                            <h5 class="colorWhite">Light Mode</h5>
+                        </li>
+                        <li id="logbar" class="list-att"><img class="invert" src="Image/login.svg" alt="">
+                            <h5 class="colorWhite">Login</h5>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right border" id="set-nav">
+                <div class="top-R">
+                    <ul class="R-ul ulist">
+                        <li class="R-li"><img id="Menubtn" class="invert" src="Image/menu.svg" alt=""></li>
+                        <li class="R-li"><button type="submit" id="loginout"><img class="invert" src="Image/user.svg"
+                                    alt="">
+                                <h5 class="title-font" id="loghide">Login</h5>
+                            </button></li>
+                        <div id="Uprofile" class="border">
+                            <img src="Image/user.svg" alt="">
+                            <h2 id="userN"></h2>
+                            <button id="signout-0btn">Sign out</button>
+                        </div>
+                    </ul>
+                </div>
+                <div id="contentA">
+                    <!-- <div id="dash"></div> -->
+                    <!-- <div class="Container-all-B" id="searchcontent"></div>  Search Bar ######  -->
+                    <!-- <div id="CastEpisode" class="EP-Contain border"></div> -->
+                    <div class="Container-all" id="dashboard">
+                        <div class="card-box">
+                            <h1 class="colorWhite">Most Popular</h1>
+                            <div class="card-contain">
+                                <section class="card-n">
+                                    <div class="playbtn playPod" onclick="showContent('option2')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17"
+                                            height="24" color="#c9bcfd" fill="none">
+                                            <path fill="#FFFFFF"
+                                                d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <img src="Image/card.jfif" alt="">
+                                    <div class="info-sub">
+                                        <h4 class="colorWhite">The Tim Ferriss Show</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, obcaecati.
+                                            A ipsum dolor officia commodi.</p>
+                                        <div class="creator"><img src="Image/download.jfif" alt="">
+                                            <h6>RISHAV CHANDA</h6>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card-n">
+                                    <div class="playbtn playPod">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17"
+                                            height="24" color="#c9bcfd" fill="none">
+                                            <path fill="#FFFFFF"
+                                                d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <img src="Image/card.jfif" alt="">
+                                    <div class="info-sub">
+                                        <h4 class="colorWhite">The Tim Ferriss Show</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, obcaecati.
+                                            A ipsum dolor officia commodi.</p>
+                                        <div class="creator"><img src="Image/download.jfif" alt="">
+                                            <h6>RISHAV CHANDA</h6>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card-n">
+                                    <div class="playbtn playPod">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17"
+                                            height="24" color="#c9bcfd" fill="none">
+                                            <path fill="#FFFFFF"
+                                                d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <img src="Image/card.jfif" alt="">
+                                    <div class="info-sub">
+                                        <h4 class="colorWhite">The Tim Ferriss Show</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, obcaecati.
+                                            A ipsum dolor officia commodi.</p>
+                                        <div class="creator"><img src="Image/download.jfif" alt="">
+                                            <h6>RISHAV CHANDA</h6>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card-n">
+                                    <div class="playbtn playPod">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17"
+                                            height="24" color="#c9bcfd" fill="none">
+                                            <path fill="#FFFFFF"
+                                                d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <img src="Image/card.jfif" alt="">
+                                    <div class="info-sub">
+                                        <h4 class="colorWhite">The Tim Ferriss Show</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, obcaecati.
+                                            A ipsum dolor officia commodi.</p>
+                                        <div class="creator"><img src="Image/download.jfif" alt="">
+                                            <h6>RISHAV CHANDA</h6>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+                            </div>
+                        </div>
+                        <div class="card-box">
+                            <h1>Comedy</h1>
+                            <div class="card-contain">
+                                <section class="card-n">
+                                    <div class="playbtn playPod">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17"
+                                            height="24" color="#c9bcfd" fill="none">
+                                            <path fill="#FFFFFF"
+                                                d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <img src="Image/card.jfif" alt="">
+                                    <div class="info-sub">
+                                        <h4 class="colorWhite">The Tim Ferriss Show</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, obcaecati.
+                                            A ipsum dolor officia commodi.</p>
+                                        <div class="creator"><img src="Image/download.jfif" alt="">
+                                            <h6>RISHAV CHANDA</h6>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card-n">
+                                    <div class="playbtn playPod">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17"
+                                            height="24" color="#c9bcfd" fill="none">
+                                            <path fill="#FFFFFF"
+                                                d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <img src="Image/card.jfif" alt="">
+                                    <div class="info-sub">
+                                        <h4 class="colorWhite">The Tim Ferriss Show</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, obcaecati.
+                                            A ipsum dolor officia commodi.</p>
+                                        <div class="creator"><img src="Image/download.jfif" alt="">
+                                            <h6>RISHAV CHANDA</h6>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+                        <div class="card-box">
+                            <h1>Crime</h1>
+                            <div class="card-contain">
+                                <section class="card-n">
+                                    <div class="playbtn playPod">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17"
+                                            height="24" color="#c9bcfd" fill="none">
+                                            <path fill="#FFFFFF"
+                                                d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <img src="Image/card.jfif" alt="">
+                                    <div class="info-sub">
+                                        <h4 class="colorWhite">The Tim Ferriss Show</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, obcaecati.
+                                            A ipsum dolor officia commodi.</p>
+                                        <div class="creator"><img src="Image/download.jfif" alt="">
+                                            <h6>RISHAV CHANDA</h6>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+                        <div class="card-box">
+                            <h1>News</h1>
+                            <div class="card-contain">
+                                <section class="card-n">
+                                    <div class="playbtn playPod">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17"
+                                            height="24" color="#c9bcfd" fill="none">
+                                            <path fill="#FFFFFF"
+                                                d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <img src="Image/card.jfif" alt="">
+                                    <div class="info-sub">
+                                        <h4 class="colorWhite">The Tim Ferriss Show</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, obcaecati.
+                                            A ipsum dolor officia commodi.</p>
+                                        <div class="creator"><img src="Image/download.jfif" alt="">
+                                            <h6>RISHAV CHANDA</h6>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div id="formall">
+                <div id="userset" class="user-indesign">
+                    <div class="login-content">
+                        <span class="close colorWhite" id="closeF">&times;</span>
+                        <h2 class="colorWhite" id="formPage">Sign In</h2>
+                        <!-- <div id="ReDirect_auth" class="Redirect-set">
+                        <img src="Image/googlelogo.svg" alt="">
+                        <h4 class="colorWhite">Sign In with Google</h4>
+                    </div>
+                    <div class="opt-or colorWhite">
+                        <hr class="hr-set colorWhite">or<hr class="hr-set">
+                    </div> -->
+                        <form action="." id="loginForm" name="submit-to-google-sheet" method="post">
+                            <div class="entryfill">
+                                <label for="usermail"></label>
+                                <img class="invert" src="Image/mail.svg" alt="">
+                                <input class="inputfill" type="email" id="email" name="email" placeholder="Email Id"
+                                    required><br><br>
+                            </div>
+                            <div class="entryfill">
+                                <label for="password"></label>
+                                <img class="invert" src="Image/passw.svg" alt="">
+                                <input class="inputfill" type="password" id="password" name="password"
+                                    placeholder="Password" required><br><br>
+                                <img id="eyeclose" class="invert" src="Image/eye visible.svg" alt=""
+                                    onclick="passecure()">
+                            </div>
+                            <div id="forget" class="frgtpass colorWhite">
+                                <div id="loader" style="display: none;"></div>
+
+                                Forgot Password ?
+                            </div>
+                            <button id="submit" class="form-btn" type="submit" name="submit">Login</button>
+                            <span id="success"></span>
+                            <!-- <div class="entryfill">
+                            <label for="otp"></label>
+                            <input class="inputfill" type="text" id="otp" name="otp" placeholder="Enter OTP" required><br><br>
+                        </div>
+                    
+                        <button class="form-btn" type="button" onclick="sendOTP()">Send OTP</button>
+                        <button class="form-btn" type="button" onclick="verifyOTP()">Verify OTP</button> -->
+                        </form>
+                        <div id="message"></div>
+                        <div class="colorWhite" id="Askuser" class="account">
+                            <h4><span>Don't have an account ? </span><span id="spanCreteLog" class="crete-login"><a
+                                        href="create.html">Create Account</a></span></h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer class="footer-play border" id="playbar">
+            <div class="container">
+                <audio id="pod">
+                    <!-- <source src="pd/pod2ayaKishori.mp3" type="audio/mp3"> -->
+                    <!-- <source src="pd/pod1ayush.mp3" type="audio/mp3"> -->
+                </audio>
+                <div class="curraudio">
+                    The Tim Ferriss Show
+                </div>
+                <div class="controls">
+                    <div class="contrlBtn">
+                        <img src="Image/previous.svg" id="prevBtn">
+                        <img src="Image/playF.svg" id="playBtn">
+                        <img src="Image/next.svg" id="nextBtn">
+                    </div>
+                    <div id="timeDisplay" class="progress">
+                        <span id="elapsedTime">0:00</span>
+                        <div class="bar">
+                            <div id="progressBar"></div>
+                        </div><span id="totalTime">0:00</span>
+                    </div>
+                </div>
+                <div class="audio-controller">
+                    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+                </div>
+                <!-- <div id="timeDisplay">
+                    <span id="elapsedTime">0:00</span> / <span id="totalTime">0:00</span>
+                </div> -->
+            </div>
+
+        </footer>
+    </section>
+    <script src="javascript/script.js"></script>
+    <script id="logfm">
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginButton = document.getElementById("loginout");
+            const modalContainer = document.getElementById("userset");
+            const closeModal = document.querySelector(".close");
+
+            loginButton.addEventListener("click", function () {
+                modalContainer.style.display = "block";
+            });
+
+            window.addEventListener("click", function (event) {
+                if (event.target === modalContainer) {
+                    modalContainer.style.display = "none";
+                }
+            });
+
+            closeModal.addEventListener("click", function () {
+                modalContainer.style.display = "none";
+            });
+        });
+
+        function formView() {
+            const modalContainer = document.getElementById("userset");
+            modalContainer.style.display = "block";
+        };
+
+        document.getElementById("Favbar").addEventListener("click", function () {
+            formView();
+        });
+        document.getElementById("logbar").addEventListener("click", function () {
+            formView();
+        });
+    </script>
+    <!-- <script src="javascript/userdta.js"></script> -->
+    <!-- <script src="javascript/validate.js"></script> -->
+    <!-- <script src="loginVal.py"></script> -->
+</body>
+
+</html>

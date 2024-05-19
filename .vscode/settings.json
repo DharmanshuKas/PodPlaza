@@ -1,3 +1,4 @@
 {
-    "livePreview.hostIP": "192.168.203.23"
+    "livePreview.hostIP": " 192.168.203.23",
+    "liveServer.settings.host": " 172.30.2.33"
 }

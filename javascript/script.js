@@ -1,35 +1,7 @@
-// function loadSearchContent() {
-//     const searchcontent = document.getElementById("searchcontent");
-
-//     fetch('search.html')
-//         .then(response => response.text())
-//         .then(content => {
-//             searchcontent.innerHTML = content;
-//             history.pushState(null, '', '/search');
-//         })
-//         .catch(error => console.log('Error fetching file:', error));
-// }
-
-// document.getElementById("searchbar").addEventListener("click", function() {
-//     let dashboard = document.getElementById("dashboard");
-//     dashboard.style.display = "none";
-
-//     loadSearchContent();
-// });
-
-
-// document.getElementById("dashbar").addEventListener("click", function() {
-//     let dashboard = document.getElementById("dashboard");
-//     dashboard.style.display = "block";
-
-//     document.getElementById("searchcontent").innerHTML = "";
-// });
-
-// Function to load search content
 function loadSearchContent() {
     const searchcontent = document.getElementById("searchcontent");
 
-    fetch('../html/search.html')
+    fetch('search.html')
         .then(response => response.text())
         .then(content => {
             searchcontent.innerHTML = content;
@@ -38,112 +10,6 @@ function loadSearchContent() {
         .catch(error => console.log('Error fetching file:', error));
 }
 
-function loadDashboardContent() {
-    const dashboard = document.getElementById("dashboard");
-    dashboard.style.display = "block";
-
-    const searchContent = document.getElementById("searchcontent");
-    searchContent.innerHTML = "";
-}
-
-document.getElementById("searchbar").addEventListener("click", function() {
-    const dashboard = document.getElementById("dashboard");
-    dashboard.style.display = "none";
-
-    loadSearchContent();
-});
-
-document.getElementById("dashbar").addEventListener("click", function() {
-    history.pushState({ page: 'index.html' }, '', '/index.html');
-    // const serchboard = document.getElementById("searchbar");
-    // serchboard.style.display = "none";
-    loadDashboardContent();
-});
-
-window.addEventListener('popstate', function(event) {
-    const state = event.state;
-    if (state && state.page === 'search') {
-        loadSearchContent();
-    } else {
-        loadDashboardContent();
-    }
-});
-
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    const loginButton = document.getElementById("loginout");
-    const modalContainer = document.getElementById("userset");
-    const closeModal = document.querySelector(".close");
-
-    loginButton.addEventListener("click", function() {
-        modalContainer.style.display = "block";
-    });
-
-    window.addEventListener("click", function(event) {
-        if (event.target === modalContainer) {
-            modalContainer.style.display = "none";
-        }
-    });
-
-    closeModal.addEventListener("click", function() {
-        modalContainer.style.display = "none";
-    });
-
-    const loginForm = document.getElementById("loginForm");
-    loginForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        console.log("Form submitted!");
-    });
-});
-
-document.getElementById("spanCreteLog").addEventListener("click",function(){
-    headform = document.getElementById("formPage");
-    headform.innerHTML = "Sign Up";
-    console.log(headform);
-
-    document.getElementById("userbox").style.display = "flex";
-
-    h4con = document.querySelector("#Askuser h4 span");
-    h4con.innerHTML = "Already have an account ? "
-    
-    spancon = document.getElementById("spanCreteLog");
-    spancon.innerHTML = " Sign in"
-    console.log(h4con);
-    console.log(spancon);
-});
-
-document.getElementById("closeF").addEventListener("click", function(){
-    headform = document.getElementById("formPage");
-    headform.innerHTML = "Sign In";
-    console.log(headform);
-
-    document.getElementById("userbox").style.display = "none";
-
-    h4con = document.querySelector("#Askuser h4 span");
-    h4con.innerHTML = "Don't have an account ? "
-    
-    spancon = document.getElementById("spanCreteLog");
-    spancon.innerHTML = " Create Account"
-    console.log(h4con);
-    console.log(spancon);    
-});
-
-function formView(){
-    const modalContainer = document.getElementById("userset");
-    modalContainer.style.display = "block";
-};
-
-document.getElementById("Favbar").addEventListener("click", function(){
-    formView();
-});
-document.getElementById("Uploadbar").addEventListener("click", function(){
-    formView();
-});
-document.getElementById("logbar").addEventListener("click", function(){
-    formView();
-});
 
 document.getElementById("Menubtn").addEventListener("click", function() {
     document.querySelector(".left").classList.toggle("hidden");
@@ -166,9 +32,6 @@ document.getElementById("Modetheme").addEventListener("click", ()=> {
         themeText.innerHTML = "Light Mode";
     }
 
-    // themeC = document.querySelector("#Modetheme h5")
-    // document.querySelector("#Modetheme img").toggle.src = "darkmode.svg"
-    // themeC.innerHTML = "Dark Mode";
     
 
     document.querySelector(".left").classList.toggle("left-L")
@@ -186,6 +49,8 @@ document.getElementById("Modetheme").addEventListener("click", ()=> {
     // document.querySelector(".Hastg h1").classList.toggle("Hastg-L")
     const tagBg = document.querySelectorAll(".hastg");
     tagBg.forEach(element => element.classList.toggle("hastg-L"));
+    const tagBgU = document.querySelectorAll(".Loadsection");
+    tagBgU.forEach(element => element.classList.toggle("Loadsection-L"));
     
     
 })
@@ -193,22 +58,22 @@ document.getElementById("Modetheme").addEventListener("click", ()=> {
 const passwordInput = document.getElementById("password");
 const eyeIcon = document.getElementById("eyeclose");
 
-eyeIcon.addEventListener("click", function() {
+eyeIcon.addEventListener("click", function passecure() {
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
-        eyeIcon.src = "../Image/eye unvis.svg";
+        eyeIcon.src = "Image/eye unvis.svg";
     } else {
         passwordInput.type = "password";
-        eyeIcon.src = "../Image/eye visible.svg";
+        eyeIcon.src = "Image/eye visible.svg";
     }
-    passwordInput.preventDefault();
+    // passwordInput.preventDefault();
 });
 
 
 function loadSearch() {
-    const searchdetail = document.getElementById("CastEpisode");
-
-    fetch('../html/podcastEP.html')
+    const searchdetail = document.getElementById("contentA");
+    // searchdetail.innerHTML = ""
+    fetch('podcastEP.html')
         .then(response => response.text())
         .then(content => {
             searchdetail.innerHTML = content;
@@ -216,9 +81,182 @@ function loadSearch() {
         .catch(error => console.log('Error fetching file:', error));
 }
 
-document.querySelectorAll(".playPod").forEach(element => {
-    element.addEventListener("click", function() {
-        document.getElementById("dashboard").style.display = "none";
-        loadSearch();
-    });
+
+function loaddash() {
+    const searchdetaila = document.getElementById("contentA");
+    // searchdetaila.innerHTML = ""
+    fetch('dash.html')
+        .then(response => response.text())
+        .then(content => {
+            searchdetaila.innerHTML = content;
+        })
+        .catch(error => console.log('Error fetching file:', error));
+}
+
+function loads() {
+    const searchdetailb = document.getElementById("contentA");
+
+    fetch('search.html')
+        .then(response => response.text())
+        .then(content => {
+            searchdetailb.innerHTML = content;
+        })
+        .catch(error => console.log('Error fetching file:', error));
+}
+
+function uploads() {
+    const searchdetailc = document.getElementById("contentA");
+
+    fetch('upload.html')
+        .then(response => response.text())
+        .then(content => {
+            searchdetailc.innerHTML = content;
+        })
+        .catch(error => console.log('Error fetching file:', error));
+}
+
+function showContent(option) {
+    // var contentDiv = document.getElementById('contentA');
+    switch (option) {
+        case 'option1':
+            loads();
+            break;
+        case 'option2':
+            loadSearch();
+            break;
+        case 'option3':
+            uploads();
+            break;
+        default:
+            loaddash();
+            break;
+    }
+}
+
+const audioPlayer = document.getElementById('pod');
+const playBtn = document.getElementById('playBtn');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const volumeSlider = document.getElementById('volumeSlider');
+const progressBar = document.getElementById('progressBar');
+const elapsedTime = document.getElementById('elapsedTime');
+const totalTime = document.getElementById('totalTime');
+
+let currentSongIndex = 0;
+let isPlaying = false;
+const songs = [];
+
+
+
+
+document.querySelector(".playbtn").addEventListener("click", function () {
+    fetch('podcastEP.html')
+        .then(response => response.text())
+        .then(content => {
+            const clickableDivs = document.querySelectorAll('.playa');
+            clickableDivs.forEach(Image => {
+                Image.addEventListener('click', () => {
+                    // Get the ID of the clicked div
+                    const clickedDivId = Image.id;
+                    console.log(clickedDivId);
+                    // Show the playbar by setting its display property to "block"
+                    const playbar = document.getElementById("playbar");
+                    playbar.style.display = "block";
+            imgElement = document.getElementById(clickedDivId)
+            imgElement.addEventListener('click', function () {
+                const audioElement = document.getElementById("audal").querySelector('audio');
+                if (audioElement) {
+                    const audioSrc = audioElement.src;
+                    let trimmedUrl = audioSrc.substring(audioSrc.indexOf("/pd"));
+
+                    // Replace "%20" with ""
+                    let modifiedUrl = trimmedUrl.replace(/%20/g, "");
+
+                    // Remove the leading "/" before "pd"
+                    modifiedUrl = modifiedUrl.replace(/^\//, "");
+                    var audio = document.getElementById('pod');
+                    var source = document.createElement('source');
+                    source.src = modifiedUrl;
+                    source.type = 'audio/mp3';
+                    console.log(source.src);
+                    audio.appendChild(source);
+                    songs.push(modifiedUrl);
+
+                    // console.log(songs); // Output: ["pd/pod1ayush.mp3"]
+
+                    // songs.push(audioSrc);
+                } else {
+                    console.log('Audio element not found.');
+                }
+                // console.log(songs);
+            });
+            // console.log(songs)
+            function playCurrentSong() {
+                if (audioPlayer.paused) {
+                    audioPlayer.src = songs[currentSongIndex];
+                    audioPlayer.play();
+                    isPlaying = true;
+                    playBtn.src = "../Image/pause.svg";
+                } else {
+                    audioPlayer.pause();
+                    isPlaying = false;
+                    playBtn.src = "../Image/playF.svg";
+                }
+            }
+
+            playBtn.addEventListener('click', function () {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                    isPlaying = true;
+                    playBtn.src = "../Image/pause.svg";
+                } else {
+                    audioPlayer.pause();
+                    isPlaying = false;
+                    playBtn.src = "../Image/playF.svg";
+                }
+            });
+
+            prevBtn.addEventListener('click', function () {
+                currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+                playCurrentSong();
+            });
+
+            nextBtn.addEventListener('click', function () {
+                currentSongIndex = (currentSongIndex + 1) % songs.length;
+                playCurrentSong();
+            });
+
+            volumeSlider.addEventListener('input', function () {
+                audioPlayer.volume = volumeSlider.value;
+            });
+
+            audioPlayer.addEventListener('loadedmetadata', () => {
+                const duration = audioPlayer.duration;
+                const totalMinutes = Math.floor(duration / 60);
+                const totalSeconds = Math.floor(duration % 60);
+                totalTime.textContent = `${totalMinutes}:${totalSeconds < 10 ? '0' : ''}${totalSeconds}`;
+            });
+
+            audioPlayer.addEventListener('timeupdate', () => {
+                const currentTime = audioPlayer.currentTime;
+                const currentMinutes = Math.floor(currentTime / 60);
+                const currentSeconds = Math.floor(currentTime % 60);
+                elapsedTime.textContent = `${currentMinutes}:${currentSeconds < 10 ? '0' : ''}${currentSeconds}`;
+
+                const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                progressBar.style.width = `${progress}%`;
+            });
+
+            audioPlayer.addEventListener('ended', () => {
+                playBtn.textContent = 'Play';
+                isPlaying = false;
+                progressBar.style.width = '0';
+            });
+
+        })
+        .catch(error => console.log('Error fetching file:', error));
+            });
+    });            
 });
+    
+
