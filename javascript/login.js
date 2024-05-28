@@ -5,12 +5,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/fireba
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA69PVgDp-G37PK5pZbs_EW6yuRDAhgLCc",
-  authDomain: "podstream-a8d6f.firebaseapp.com",
-  projectId: "podstream-a8d6f",
-  storageBucket: "podstream-a8d6f.appspot.com",
-  messagingSenderId: "807428610300",
-  appId: "1:807428610300:web:70c4e5b7d4d289ce209f79"
+  apiKey: "APIKEY",
+  authDomain: "podstream.firebaseapp.com",
+  projectId: "podstream",
+  storageBucket: "podstreamappspot.com",
+  messagingSenderId: "",
+  appId: ""
 };
 
 // Initialize Firebase
