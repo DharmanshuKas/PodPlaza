@@ -5,7 +5,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/fireba
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA69PVgDp-G37PK5pZbs_EW6yuRDAhgLCc",
+  apiKey: "APIKEY",
   authDomain: "podstream-a8d6f.firebaseapp.com",
   projectId: "podstream-a8d6f",
   storageBucket: "podstream-a8d6f.appspot.com",
