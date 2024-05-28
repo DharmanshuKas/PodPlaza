@@ -6,11 +6,11 @@ import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com
 
 const firebaseConfig = {
   apiKey: "APIKEY",
-  authDomain: "podstream-a8d6f.firebaseapp.com",
-  projectId: "podstream-a8d6f",
-  storageBucket: "podstream-a8d6f.appspot.com",
-  messagingSenderId: "807428610300",
-  appId: "1:807428610300:web:70c4e5b7d4d289ce209f79"
+  authDomain: "podstream.firebaseapp.com",
+  projectId: "podstream",
+  storageBucket: "podstreamappspot.com",
+  messagingSenderId: "",
+  appId: ""
 };
 
 // Initialize Firebase
